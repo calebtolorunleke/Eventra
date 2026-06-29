@@ -5,7 +5,7 @@ import { Search, Menu as MenuIcon, Close } from "@mui/icons-material";
 const Navbar = () => {
   const [Menu, setMenu] = useState(false);
   return (
-    <section className="w-full backdrop-blur-md bg-black/20 bg-opacity-50 mx-auto top-0">
+    <section className="fixed z-10 w-full backdrop-blur-md bg-black/20 bg-opacity-50 mx-auto top-0">
       {/* Desktop View */}
       <nav className="lg:flex hidden flex-row items-center justify-between px-8 py-5 max-w-[1250px] mx-auto">
         <Logo />
