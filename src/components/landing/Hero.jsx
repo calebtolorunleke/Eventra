@@ -8,7 +8,7 @@ const Hero = () => {
       style={{ backgroundImage: `url(${background} )` }}
     >
       <div className="absolute inset-0 bg-black/50"></div>
-      <div className="flex z-10 items-center justify-center flex-col max-w-[1250px] text-center md:px-12">
+      <div className="flex z-1 items-center justify-center flex-col max-w-[1250px] text-center md:px-12">
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">
           Discover Events That Inspire and Connect{" "}
         </h1>
