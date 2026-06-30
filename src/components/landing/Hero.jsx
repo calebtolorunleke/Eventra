@@ -4,7 +4,7 @@ import background from "../../assets/images/landingPageBg.jpg";
 const Hero = () => {
   return (
     <section
-      className=" h-[40rem] md:h-[45rem] w-full flex bg-black/40 inset-0 flex-col items-center bg-center justify-center text-white mx-auto"
+      className="relative  h-[40rem] md:h-[45rem] w-full flex bg-black/40 inset-0 flex-col items-center bg-center justify-center text-white mx-auto"
       style={{ backgroundImage: `url(${background} )` }}
     >
       <div className="absolute inset-0 bg-black/50"></div>
