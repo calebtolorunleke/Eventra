@@ -21,9 +21,12 @@ export const EventCard = () => {
           />
 
           <div className="flex flex-1 flex-col space-y-3 p-5">
-            <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700">
-              {event.category}
-            </span>
+            <div className="">
+              {" "}
+              <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700">
+                {event.category}
+              </span>
+            </div>
 
             <h3 className="text-xl font-bold">{event.title}</h3>
 
@@ -44,7 +47,10 @@ export const EventCard = () => {
             </div>
 
             <div className="flex items-center justify-between pt-2">
-              <span className="text-2xl font-bold text-green-700">{event.pricing.currency}{event.pricing.amount}</span>
+              <span className="text-2xl font-bold text-green-700">
+                {event.pricing.currency}
+                {event.pricing.amount}
+              </span>
 
               <button className="rounded-lg bg-green-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-green-800">
                 Get Tickets!

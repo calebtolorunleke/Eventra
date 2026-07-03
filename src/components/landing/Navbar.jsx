@@ -10,9 +10,11 @@ const Navbar = () => {
       <nav className="lg:flex hidden flex-row items-center justify-between px-8 py-5 max-w-[1250px] mx-auto">
         <Logo />
         <ul className="flex items-center gap-8 text-white text-md">
-          <li>Discover Events</li>
-          <li>About Us</li>
-          <li>Contact</li>
+          <li className="cursor-pointer hover:text-green-600">
+            Discover Events
+          </li>
+          <li className="cursor-pointer hover:text-green-600">About Us</li>
+          <li className="cursor-pointer hover:text-green-600">Contact</li>
         </ul>
         <div className="flex flex-row items-center gap-6 text-white font-bold">
           <Search
