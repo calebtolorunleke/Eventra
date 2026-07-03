@@ -1,5 +1,6 @@
 import React from "react";
 import events from "../data/events";
+import { CalendarTodayOutlined, LocationOnOutlined } from "@mui/icons-material";
 
 export const EventCard = () => {
   return (
@@ -15,25 +16,35 @@ export const EventCard = () => {
         >
           <img
             src={event.image}
-            alt="Mr Charles Kitchen Cooking Session"
+            alt={event.title}
             className="h-52 w-full object-cover"
           />
 
-          <div className="space-y-3 p-5">
+          <div className="flex flex-1 flex-col space-y-3 p-5">
             <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700">
-              Cooking
+              {event.category}
             </span>
 
-            <h3 className="text-xl font-bold">
-              Mr. Charles Kitchen Cooking Session
-            </h3>
+            <h3 className="text-xl font-bold">{event.title}</h3>
 
-            <p className="text-sm text-gray-500">📍 Banana Island, Lagos</p>
+            <div className="flex items-center  gap-2 text-sm text-gray-500">
+              <LocationOnOutlined sx={{ fontSize: 16 }} />
+              <span>{event.location.venue} </span>{" "}
+            </div>
 
-            <p className="text-sm text-gray-500">📅 Oct 30, 2025 • 6:00 PM</p>
+            <div className="flex flex-col md:flex-row justify-between">
+              <div className="flex items-center gap-2 text-sm text-gray-500">
+                <CalendarTodayOutlined sx={{ fontSize: 16 }} />
+                <span>{event.schedule.date}</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-gray-500">
+                <CalendarTodayOutlined sx={{ fontSize: 16 }} />
+                <span>{event.schedule.startTime}</span>
+              </div>
+            </div>
 
             <div className="flex items-center justify-between pt-2">
-              <span className="text-2xl font-bold text-green-700">$50</span>
+              <span className="text-2xl font-bold text-green-700">{event.pricing.currency}{event.pricing.amount}</span>
 
               <button className="rounded-lg bg-green-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-green-800">
                 Get Tickets!
