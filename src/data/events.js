@@ -15,16 +15,15 @@ const events = [
     },
     pricing: {
       amount: 50,
-      currency: "USD",
+      currency: "$",
     },
-    image: "https://source.unsplash.com/featured/600x400/?cooking,chef",
+    image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80",
     featured: true,
     seatsLeft: 84,
     organizer: "Chef Charles",
     rating: 4.9,
     attendees: 512,
   },
-
   {
     id: 2,
     title: "React Developers Meetup",
@@ -41,16 +40,15 @@ const events = [
     },
     pricing: {
       amount: 35,
-      currency: "USD",
+      currency: "$",
     },
-    image: "https://source.unsplash.com/featured/600x400/?developer,computer",
+    image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&w=600&q=80",
     featured: true,
     seatsLeft: 130,
     organizer: "React Vancouver",
     rating: 4.8,
     attendees: 860,
   },
-
   {
     id: 3,
     title: "Afrobeats Night Live",
@@ -67,16 +65,15 @@ const events = [
     },
     pricing: {
       amount: 80,
-      currency: "USD",
+      currency: "$",
     },
-    image: "https://source.unsplash.com/featured/600x400/?concert,music",
+    image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80",
     featured: true,
     seatsLeft: 250,
     organizer: "Live Nation",
     rating: 4.9,
     attendees: 1850,
   },
-
   {
     id: 4,
     title: "Startup Founders Summit",
@@ -93,16 +90,15 @@ const events = [
     },
     pricing: {
       amount: 120,
-      currency: "USD",
+      currency: "$",
     },
-    image: "https://source.unsplash.com/featured/600x400/?startup,business",
+    image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=600&q=80",
     featured: true,
     seatsLeft: 60,
     organizer: "Startup Alberta",
     rating: 4.7,
     attendees: 420,
   },
-
   {
     id: 5,
     title: "Yoga & Wellness Retreat",
@@ -119,16 +115,15 @@ const events = [
     },
     pricing: {
       amount: 25,
-      currency: "USD",
+      currency: "$",
     },
-    image: "https://source.unsplash.com/featured/600x400/?yoga,wellness",
+    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80",
     featured: false,
     seatsLeft: 42,
     organizer: "Wellness BC",
     rating: 4.8,
     attendees: 260,
   },
-
   {
     id: 6,
     title: "Photography Masterclass",
@@ -145,16 +140,15 @@ const events = [
     },
     pricing: {
       amount: 65,
-      currency: "USD",
+      currency: "$",
     },
-    image: "https://source.unsplash.com/featured/600x400/?photography,camera",
+    image: "https://images.unsplash.com/photo-1493863641943-9b68992a8d07?auto=format&fit=crop&w=600&q=80",
     featured: false,
     seatsLeft: 90,
     organizer: "Creative Lens",
     rating: 4.6,
     attendees: 330,
   },
-
   {
     id: 7,
     title: "Food Truck Festival",
@@ -171,16 +165,15 @@ const events = [
     },
     pricing: {
       amount: 0,
-      currency: "USD",
+      currency: "$",
     },
-    image: "https://source.unsplash.com/featured/600x400/?food,festival",
+    image: "https://images.unsplash.com/photo-1485182708500-e8f1f318ba72?auto=format&fit=crop&w=600&q=80",
     featured: true,
     seatsLeft: 500,
     organizer: "Burnaby Events",
     rating: 4.8,
     attendees: 2100,
   },
-
   {
     id: 8,
     title: "Women in Tech Conference",
@@ -197,17 +190,15 @@ const events = [
     },
     pricing: {
       amount: 150,
-      currency: "USD",
+      currency: "$",
     },
-    image:
-      "https://source.unsplash.com/featured/600x400/?conference,technology",
+    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80",
     featured: true,
     seatsLeft: 180,
     organizer: "Women Tech Network",
     rating: 4.9,
     attendees: 1240,
   },
-
   {
     id: 9,
     title: "Artificial Intelligence Bootcamp",
@@ -224,17 +215,15 @@ const events = [
     },
     pricing: {
       amount: 200,
-      currency: "USD",
+      currency: "$",
     },
-    image:
-      "https://source.unsplash.com/featured/600x400/?artificial-intelligence,technology",
+    image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=600&q=80",
     featured: true,
     seatsLeft: 55,
     organizer: "AI Academy",
     rating: 5.0,
     attendees: 680,
   },
-
   {
     id: 10,
     title: "Charity Marathon 2026",
@@ -251,16 +240,15 @@ const events = [
     },
     pricing: {
       amount: 20,
-      currency: "USD",
+      currency: "$",
     },
-    image: "https://source.unsplash.com/featured/600x400/?marathon,running",
+    image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=600&q=80",
     featured: false,
     seatsLeft: 400,
     organizer: "Kamloops Run Club",
     rating: 4.7,
     attendees: 950,
   },
-
   {
     id: 11,
     title: "Summer Beach Party",
@@ -277,16 +265,15 @@ const events = [
     },
     pricing: {
       amount: 40,
-      currency: "USD",
+      currency: "$",
     },
-    image: "https://source.unsplash.com/featured/600x400/?beach,party",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
     featured: true,
     seatsLeft: 320,
     organizer: "Summer Vibes",
     rating: 4.8,
     attendees: 1680,
   },
-
   {
     id: 12,
     title: "Networking Mixer for Developers",
@@ -303,10 +290,9 @@ const events = [
     },
     pricing: {
       amount: 15,
-      currency: "USD",
+      currency: "$",
     },
-    image:
-      "https://source.unsplash.com/featured/600x400/?networking,developers",
+    image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80",
     featured: false,
     seatsLeft: 75,
     organizer: "DevConnect",
