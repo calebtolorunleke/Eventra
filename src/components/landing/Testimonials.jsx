@@ -43,8 +43,8 @@ export const Testimonials = () => {
       <div className="flex flex-col">
         <Slider {...settings}>
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id}>
-              <div className="flex flex-col gap-6 p-8 bg-white shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 mx-4 rounded-xl mb-3">
+            <div key={testimonial.id} className="px-2 h-full">
+              <div className=" flex flex-col gap-6 p-8 bg-white shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 mx-4 rounded-xl mb-3">
                 <div className="flex justify-start items-center gap-5">
                   <img
                     src={testimonial.image}
