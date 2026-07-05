@@ -2,7 +2,7 @@ import testimonyImg from "../assets/images/Testimonial1.png";
 import testimonyImg1 from "../assets/images/Testimonial2.png";
 import testimonyImg2 from "../assets/images/Testimonial2.png";
 import testimonyImg3 from "../assets/images/Testimonial3.png";
-import testimonialVector from "../assets/icons/testimonialVector2.png";
+// import testimonialVector from "../assets/icons/testimonialVector2.png";
 
 export const testimonials = [
   {
@@ -14,7 +14,7 @@ export const testimonials = [
     content:
       "Eventra transformed how I discover concerts. I found my favorite band's show and never miss out now. Eve",
     location: "Toronto, ON",
-    vector: testimonialVector,
+    // vector: testimonialVector,
   },
   {
     id: 2,
@@ -25,29 +25,29 @@ export const testimonials = [
     content:
       "I discovered a workshop through Eventra, and booking was effortless. It was an unforgettable experience.",
     location: "Vancouver, BC",
-    vector: testimonialVector,
+    // vector: testimonialVector,
   },
   {
     id: 3,
     name: "Tiger Woods",
     role: "Workshop Attendee",
     rating: 5,
-    image: testimonyImg3,
+    image: testimonyImg2,
     content:
       "I found exciting events nearby with Eventra. Now I never miss great experiences happening around me. Eve",
     location: "Calgary, AB",
-    vector: testimonialVector,
+    // vector: testimonialVector,
   },
   {
     id: 4,
     name: "Sarah Johnson",
     role: "Concert Lover",
     rating: 5,
-    image: testimonyImg,
+    image: testimonyImg3,
     content:
       "Booking was quick and easy. I got my ticket in seconds, and the event exceeded all my expectations. Wow!",
     location: "Montreal, QC",
-    vector: testimonialVector,
+    // vector: testimonialVector,
   },
   // {
   //   id: 5,
@@ -131,10 +131,10 @@ export const testimonials = [
     name: "Olivia Martinez",
     role: "Travel Blogger",
     rating: 5,
-    image: testimonyImg3,
+    image: testimonyImg,
     content:
       "Whenever I visit a new city, Eventra is the first place I check for local festivals and cultural events.",
     location: "Kamloops, BC",
-    vector: testimonialVector,
+    // vector: testimonialVector,
   },
 ];

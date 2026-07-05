@@ -1,4 +1,4 @@
-import React from "react";
+
 import { testimonials } from "../../data/testimonials";
 import SliderImport from "react-slick";
 import { LocationOn } from "@mui/icons-material";
