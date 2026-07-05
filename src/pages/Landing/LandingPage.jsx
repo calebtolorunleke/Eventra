@@ -6,6 +6,7 @@ import EventCategory from "../../components/landing/EventCategory";
 import HowItWorks from "../../components/landing/HowItWorks";
 import WhyChooseUs from "../../components/landing/WhyChooseUs";
 import { Testimonials } from "../../components/landing/Testimonials";
+import DiscoverEvents from "../../components/landing/DiscoverEvents";
 
 const LandingPage = () => {
   return (
@@ -17,6 +18,7 @@ const LandingPage = () => {
       <HowItWorks />
       <WhyChooseUs />
       <Testimonials />
+      <DiscoverEvents />
     </main>
   );
 };
