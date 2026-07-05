@@ -7,6 +7,7 @@ import HowItWorks from "../../components/landing/HowItWorks";
 import WhyChooseUs from "../../components/landing/WhyChooseUs";
 import { Testimonials } from "../../components/landing/Testimonials";
 import DiscoverEvents from "../../components/landing/DiscoverEvents";
+import Footer from "../../components/landing/Footer";
 
 const LandingPage = () => {
   return (
@@ -19,6 +20,7 @@ const LandingPage = () => {
       <WhyChooseUs />
       <Testimonials />
       <DiscoverEvents />
+      <Footer />
     </main>
   );
 };
