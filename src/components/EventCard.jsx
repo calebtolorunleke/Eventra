@@ -9,7 +9,7 @@ export const EventCard = () => {
         <h1 key={event.id}>{event.id}</h1>
       ))} */}
 
-      {events.map((event, index) => (
+      {events.map((event) => (
         <div
           className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
           key={event.id}
