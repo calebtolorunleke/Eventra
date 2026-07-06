@@ -1,4 +1,3 @@
-
 import { testimonials } from "../../data/testimonials";
 import SliderImport from "react-slick";
 import { LocationOn } from "@mui/icons-material";
@@ -61,7 +60,11 @@ export const Testimonials = () => {
                 </div>
 
                 <p className="text-gray-600 leading-7 italic">
-                  “{testimonial.content}”
+                  “
+                  {testimonial.content.length > 102
+                    ? `${testimonial.content.slice(0, 102)}...`
+                    : testimonial.content}
+                  ”
                 </p>
 
                 <div className="border-t border-gray-200"></div>
