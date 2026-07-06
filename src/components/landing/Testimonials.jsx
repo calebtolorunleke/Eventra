@@ -53,9 +53,9 @@ export const Testimonials = () => {
 
                   <div>
                     <p className="text-xl font-bold text-black/80">
-                      {testimonial.name}
+                      {testimonial.name.slice(0,6)}
                     </p>
-                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+                    <p className="text-sm text-gray-500">{testimonial.role.length > 7 ? testimonial.role.slice(0,7) : testimonial.role }</p>
                   </div>
                 </div>
 
