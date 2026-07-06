@@ -31,7 +31,7 @@ export const Testimonials = () => {
 
   return (
     // <section className="max-w-7xl mx-auto py-20 px-6">
-    <section className="max-w-7xl mx-auto py-16 md:py-20 px-4 sm:px-6">
+    <section className="max-w-7xl mx-auto py-16 md:py-20 px-4 sm:px-6 md:px-8 overflow-hidden ">
       {" "}
       <div className="mb-12 text-center">
         <h1 className="text-3xl md:text-4xl font-bold">Testimonials</h1>
@@ -39,7 +39,7 @@ export const Testimonials = () => {
           Trusted by Event Lovers Everywhere
         </p>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col overflow-hidden">
         <Slider {...settings}>
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="px-2">
