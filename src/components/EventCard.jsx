@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 
 import { CalendarTodayOutlined, LocationOnOutlined } from "@mui/icons-material";
 
-const [events, setEvents] = useState([]);
-
 export const EventCard = () => {
+  const [events, setEvents] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -15,9 +15,16 @@ export const EventCard = () => {
             "Content-Type": "application/json",
           },
         });
-      } catch (error) {}
+
+        const data = await response.json();
+        console.log(data);
+        setEvents(data);
+      } catch (error) {
+        console.error(error);
+      }
     };
-  });
+    fetchData();
+  }, []);
 
   return (
     <>
