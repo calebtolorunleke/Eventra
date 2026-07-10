@@ -1,8 +1,24 @@
-import React from "react";
-import events from "../data/events";
+import React, { useEffect, useState } from "react";
+// import events from "../data/events";
+
 import { CalendarTodayOutlined, LocationOnOutlined } from "@mui/icons-material";
 
+const [events, setEvents] = useState([]);
+
 export const EventCard = () => {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:4000/", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+      } catch (error) {}
+    };
+  });
+
   return (
     <>
       {/* {events.map((event, index) => (
