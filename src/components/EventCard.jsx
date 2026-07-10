@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 // import events from "../data/events";
 
 import { CalendarTodayOutlined, LocationOnOutlined } from "@mui/icons-material";
+import { Typing } from "@/components/loading-ui/typing";
 
 export const EventCard = () => {
   const [events, setEvents] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,10 +23,21 @@ export const EventCard = () => {
         setEvents(data);
       } catch (error) {
         console.error(error);
+      } finally {
+        setIsLoading(false);
       }
     };
     fetchData();
   }, []);
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center gap-1 text-green-600 items-center gap-8">
+        <h1 className="text-lg font-bold">Loading events</h1>
+        <Typing className="w-10" />
+      </div>
+    );
+  }
 
   return (
     <>
