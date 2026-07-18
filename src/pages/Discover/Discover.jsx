@@ -1,7 +1,12 @@
+import Hero from "@/components/landing/Hero";
 import React from "react";
 
 const Discover = () => {
-  return <div>Discover</div>;
+  return (
+    <section>
+      <Hero />
+    </section>
+  );
 };
 
 export default Discover;
