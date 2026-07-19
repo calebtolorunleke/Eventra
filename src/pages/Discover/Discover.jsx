@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero";
 import React from "react";
-import background from "../../assets/images/discoverimg.jpg";
+// import background from "../../assets/images/discoverimg.jpg";
 import { discoverevents } from "../../data/discoverevents";
 
 const Discover = () => {
