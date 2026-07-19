@@ -1,8 +1,8 @@
 import Hero from "@/components/Hero";
 import React from "react";
-import background from "../../assets/images/discoverimg.jpg";
+import background from "../../assets/images/landingPageBg.jpg";
 
-const Discover = () => {
+const LandingHero = () => {
   const Herodata = [
     {
       id: 1,
@@ -24,4 +24,4 @@ const Discover = () => {
   );
 };
 
-export default Discover;
+export default LandingHero;
