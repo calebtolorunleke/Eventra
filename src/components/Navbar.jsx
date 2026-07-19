@@ -17,7 +17,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/discoverevents"
-              className={`cursor-pointer hover:text-green-600 pb-1 ${location.pathname === "/discoverevents" ? `border-b-2 border-green-400 transition-all ` : ``}`}
+              className={`cursor-pointer pb-1 transition-all duration-300 hover:text-green-600 ${location.pathname === "/discoverevents" ? `border-b-2 border-green-400 transition-all ` : ``}`}
             >
               Discover Events
             </Link>
@@ -25,7 +25,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/aboutus"
-              className={`cursor-pointer hover:text-green-600 pb-1 ${location.pathname === "/aboutus" ? `border-b-2 border-green-400 transition-all` : ``}`}
+              className={`cursor-pointer pb-1 transition-all duration-300 hover:text-green-600 ${location.pathname === "/aboutus" ? `border-b-2 border-green-400 transition-all` : ``}`}
             >
               About Us
             </Link>
@@ -33,7 +33,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/contactus"
-              className={`cursor-pointer hover:text-green-600 pb-1 ${location.pathname === "/contactus" ? `border-b-2 border-green-400 transition-all` : ``}`}
+              className={`cursor-pointer pb-1 transition-all duration-300 hover:text-green-600 ${location.pathname === "/contactus" ? `border-b-2 border-green-400 transition-all` : ``}`}
             >
               Contact Us
             </Link>
