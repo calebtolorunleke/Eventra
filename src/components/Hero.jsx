@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Hero = ({ data }) => {
   return (
@@ -14,9 +15,11 @@ const Hero = ({ data }) => {
         <h4 className="text-base sm:text-lg md:text-2xl text-gray-200 py-6">
           {data.description}
         </h4>
-        <button className="bg-green-900 px-6 sm:px-12 py-3 sm:py-4 rounded-md text-sm sm:text-lg">
-          {data.button}
-        </button>
+        {data.button && (
+          <button className="rounded-lg bg-green-900 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-green-800 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-green-500/30 active:translate-y-0 active:scale-95">
+            <Link to={data.button.href}> {data.button.text}</Link>
+          </button>
+        )}
       </div>
     </section>
   );
