@@ -1,4 +1,4 @@
-import background from "../assets/images/discoverimg.jpg";
+import background from "../assets/images/discoverimage.jpg";
 
 export const discoverevents = [
   {
