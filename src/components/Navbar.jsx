@@ -1,21 +1,45 @@
 import React, { useState } from "react";
-import Logo from "../common/Logo";
+import Logo from "./common/Logo";
 import { Search, Menu as MenuIcon, Close } from "@mui/icons-material";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
   const [Menu, setMenu] = useState(false);
   return (
-    <section className="fixed z-10 w-full backdrop-blur-md bg-black/20 bg-opacity-50 mx-auto top-0">
+    <header className="fixed z-10 w-full backdrop-blur-md bg-black/20 bg-opacity-50 mx-auto top-0">
       {/* Desktop View */}
       <nav className="lg:flex hidden flex-row items-center justify-between px-8 py-5 max-w-[1250px] mx-auto">
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
         <ul className="flex items-center gap-8 text-white text-md">
-          <li className="cursor-pointer hover:text-green-600">
-            Discover Events
+          <li>
+            <Link
+              to="/discoverevents"
+              className={`cursor-pointer hover:text-green-600 pb-1 ${location.pathname === "/discoverevents" ? `border-b-2 border-green-400 transition-all ` : ``}`}
+            >
+              Discover Events
+            </Link>
           </li>
-          <li className="cursor-pointer hover:text-green-600">About Us</li>
-          <li className="cursor-pointer hover:text-green-600">Contact</li>
+          <li>
+            <Link
+              to="/aboutus"
+              className={`cursor-pointer hover:text-green-600 pb-1 ${location.pathname === "/aboutus" ? `border-b-2 border-green-400 transition-all` : ``}`}
+            >
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/contactus"
+              className={`cursor-pointer hover:text-green-600 pb-1 ${location.pathname === "/contactus" ? `border-b-2 border-green-400 transition-all` : ``}`}
+            >
+              Contact Us
+            </Link>
+          </li>
         </ul>
+
         <div className="flex flex-row items-center gap-6 text-white font-bold">
           <Search
             className="cursor-pointer  text-white "
@@ -60,7 +84,7 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
-    </section>
+    </header>
   );
 };
 

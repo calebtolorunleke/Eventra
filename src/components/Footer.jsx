@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "../common/Logo";
-import { quickLinks, supportLinks, socialLinks } from "../../data/quicklinks";
+import Logo from "./common/Logo";
+import { quickLinks, supportLinks, socialLinks } from "../data/quicklinks";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
