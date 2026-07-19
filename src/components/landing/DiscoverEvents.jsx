@@ -1,4 +1,4 @@
-import discoverImg from "../../assets/images/Discoverimg.jpg";
+import discoverImg from "../../assets/images/landingPageBg.jpg";
 
 const DiscoverEvents = () => {
   return (
