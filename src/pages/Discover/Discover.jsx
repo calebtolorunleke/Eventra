@@ -3,6 +3,8 @@ import React, { useState } from "react";
 // import background from "../../assets/images/discoverimg.jpg";
 import { discoverevents } from "../../data/discoverevents";
 import { Search } from "lucide-react";
+import EventraCard from "@/components/EventraCard";
+import { eventsData } from "../../data/events";
 
 const Discover = () => {
   // const Herodata = [
@@ -24,7 +26,7 @@ const Discover = () => {
       {discoverevents.map((data) => (
         <Hero key={data.id} data={data} />
       ))}
-      <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-20 md:flex-row md:items-center md:justify-between">
+      <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-10 md:flex-row md:items-center md:justify-between">
         <div className="flex flex-wrap gap-4">
           {" "}
           <select
@@ -69,6 +71,11 @@ const Discover = () => {
             className="w-full rounded-lg border border-black/20 py-2 pl-10 pr-4 outline-none focus:border-green-500"
           />
         </div>
+      </div>
+      <div className="max-w-7xl mx-auto px-6 grid gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-5">
+        {eventsData.map((eventData) => (
+          <EventraCard key={eventData.id} eventData={eventData} />
+        ))}
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-const events = [
+export const eventsData = [
   {
     id: 1,
     title: "Mr. Charles Kitchen Cooking Session",
@@ -17,7 +17,8 @@ const events = [
       amount: 50,
       currency: "$",
     },
-    image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80",
     featured: true,
     seatsLeft: 84,
     organizer: "Chef Charles",
@@ -42,7 +43,8 @@ const events = [
       amount: 35,
       currency: "$",
     },
-    image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&w=600&q=80",
     featured: true,
     seatsLeft: 130,
     organizer: "React Vancouver",
@@ -67,7 +69,8 @@ const events = [
       amount: 80,
       currency: "$",
     },
-    image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80",
     featured: true,
     seatsLeft: 250,
     organizer: "Live Nation",
@@ -92,7 +95,8 @@ const events = [
       amount: 120,
       currency: "$",
     },
-    image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=600&q=80",
     featured: true,
     seatsLeft: 60,
     organizer: "Startup Alberta",
@@ -117,7 +121,8 @@ const events = [
       amount: 25,
       currency: "$",
     },
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80",
     featured: false,
     seatsLeft: 42,
     organizer: "Wellness BC",
@@ -142,7 +147,8 @@ const events = [
       amount: 65,
       currency: "$",
     },
-    image: "https://images.unsplash.com/photo-1493863641943-9b68992a8d07?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1493863641943-9b68992a8d07?auto=format&fit=crop&w=600&q=80",
     featured: false,
     seatsLeft: 90,
     organizer: "Creative Lens",
@@ -167,7 +173,8 @@ const events = [
       amount: 0,
       currency: "$",
     },
-    image: "https://images.unsplash.com/photo-1485182708500-e8f1f318ba72?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1485182708500-e8f1f318ba72?auto=format&fit=crop&w=600&q=80",
     featured: true,
     seatsLeft: 500,
     organizer: "Burnaby Events",
@@ -192,7 +199,8 @@ const events = [
       amount: 150,
       currency: "$",
     },
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80",
     featured: true,
     seatsLeft: 180,
     organizer: "Women Tech Network",
@@ -217,7 +225,8 @@ const events = [
       amount: 200,
       currency: "$",
     },
-    image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=600&q=80",
     featured: true,
     seatsLeft: 55,
     organizer: "AI Academy",
@@ -242,7 +251,8 @@ const events = [
       amount: 20,
       currency: "$",
     },
-    image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=600&q=80",
     featured: false,
     seatsLeft: 400,
     organizer: "Kamloops Run Club",
@@ -267,7 +277,8 @@ const events = [
       amount: 40,
       currency: "$",
     },
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
     featured: true,
     seatsLeft: 320,
     organizer: "Summer Vibes",
@@ -292,7 +303,8 @@ const events = [
       amount: 15,
       currency: "$",
     },
-    image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80",
     featured: false,
     seatsLeft: 75,
     organizer: "DevConnect",
@@ -300,5 +312,3 @@ const events = [
     attendees: 470,
   },
 ];
-
-export default events;
