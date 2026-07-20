@@ -6,6 +6,7 @@ import WhyChooseUs from "@/components/landing/WhyChooseUs";
 import MeetTeam from "@/components/MeetTeam";
 import { Testimonials } from "@/components/landing/Testimonials";
 import DiscoverEvents from "@/components/landing/DiscoverEvents";
+import Sigevents from "@/components/Sigevents";
 
 const Aboutus = () => {
   return (
@@ -16,6 +17,7 @@ const Aboutus = () => {
       <Visions />
       <WhyChooseUs />
       <MeetTeam />
+      <Sigevents/>
       <Testimonials/>
       <DiscoverEvents/>
     </section>
