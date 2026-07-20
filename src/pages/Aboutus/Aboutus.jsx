@@ -3,6 +3,7 @@ import React from "react";
 import { aboutdata } from "../../data/aboutdata";
 import Visions from "@/components/Visions";
 import WhyChooseUs from "@/components/landing/WhyChooseUs";
+import MeetTeam from "@/components/MeetTeam";
 
 const Aboutus = () => {
   return (
@@ -11,7 +12,8 @@ const Aboutus = () => {
         <Hero key={data.id} data={data} />
       ))}
       <Visions />
-      <WhyChooseUs/>
+      <WhyChooseUs />
+      <MeetTeam />
     </section>
   );
 };
