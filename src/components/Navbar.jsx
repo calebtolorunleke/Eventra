@@ -43,12 +43,15 @@ const Navbar = () => {
         <div className="flex flex-row items-center gap-6 text-white font-bold">
           <Search
             className="cursor-pointer  text-white "
-            sx={{ fontSize: 28 }}
+            sx={{ fontSize: 23 }}
           />
-          <button>Sign in</button>
-          <button className="bg-green-900 px-4 py-2 rounded-md text-sm">
+          <Link to="/signin">Sign in</Link>
+          <Link
+            to="/signup"
+            className="bg-green-900 px-4 py-2 rounded-md text-sm cursor-pointer"
+          >
             Get Started
-          </button>
+          </Link>
         </div>
       </nav>
 
