@@ -53,7 +53,7 @@ const Signup = () => {
               </div>{" "}
               <div className="flex flex-col gap-2">
                 <label
-                  htmlFor="email"
+                  htmlFor="phoneNumber"
                   className="text-sm font-semibold text-gray-900"
                 >
                   Last name
@@ -92,18 +92,56 @@ const Signup = () => {
 
             <div className="flex flex-col gap-2">
               <label
-                htmlFor="password"
+                htmlFor="phoneNumber"
                 className="text-sm font-semibold text-gray-900"
               >
-                Password
+                Phone Number
               </label>
 
               <input
-                id="password"
-                name="password"
+                id="phoneNumber"
+                name="phoneNumber"
+                type="tel"
+                placeholder="Enter your phone number"
+                autoComplete="tel"
+                required
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 outline-none transition placeholder:italic placeholder:text-gray-400 focus:border-green-700 focus:ring-2 focus:ring-green-100"
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label
+                htmlFor="createPassword"
+                className="text-sm font-semibold text-gray-900"
+              >
+                Create Password *
+              </label>
+
+              <input
+                id="createPassword"
+                name="createPassword"
                 type="password"
-                placeholder="Enter your password"
-                autoComplete="current-password"
+                placeholder="******"
+                autoComplete="new-password"
+                required
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 outline-none transition placeholder:italic placeholder:text-gray-400 focus:border-green-700 focus:ring-2 focus:ring-green-100"
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label
+                htmlFor="confirmPassword"
+                className="text-sm font-semibold text-gray-900"
+              >
+                Confirm Password *
+              </label>
+
+              <input
+                id="confirmPassword"
+                name="confirmPassword"
+                type="password"
+                placeholder="******"
+                autoComplete="new-password"
                 required
                 className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 outline-none transition placeholder:italic placeholder:text-gray-400 focus:border-green-700 focus:ring-2 focus:ring-green-100"
               />
@@ -122,32 +160,33 @@ const Signup = () => {
                   htmlFor="remember"
                   className="cursor-pointer text-sm text-gray-700"
                 >
-                  Remember me
+                  I agree to{" "}
+                  <span className="text-green-600">Terms of Service</span> and{" "}
+                  <span className="text-green-600">Privacy Policies</span>
                 </label>
               </div>
-
-              <Link
-                to="/forgot-password"
-                className="text-sm font-semibold text-green-800 transition hover:text-green-700 hover:underline"
-              >
-                Forgot password?
-              </Link>
             </div>
 
             <button
               type="submit"
               className="w-full rounded-lg bg-green-950 px-4 py-3 font-semibold text-white transition hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-offset-2"
             >
-              Sign In
+              Create Account
             </button>
 
+            <div className="flex items-center gap-4">
+              <hr className="flex-1 border-gray-300" />
+              <span className="text-sm font-medium text-gray-500">Or</span>
+              <hr className="flex-1 border-gray-300" />
+            </div>
+
             <p className="text-center text-sm text-gray-600">
-              Don&apos;t have an account?{" "}
+              Already have an account?{" "}
               <Link
                 to="/signup"
                 className="font-semibold text-green-800 transition hover:text-green-700 hover:underline"
               >
-                Create an account
+                Login
               </Link>
             </p>
           </form>
