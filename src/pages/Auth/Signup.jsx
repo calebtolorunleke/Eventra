@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Google } from "@mui/icons-material";
 import signIn from "../../assets/images/partySpray.jpg";
 import Logo from "@/components/common/Logo";
 
 const Signup = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
+  };
+
+  const handleGoogleSignup = () => {
+    console.log("Continue with Google");
   };
 
   return (
@@ -27,44 +32,45 @@ const Signup = () => {
 
             <p className="mt-3 leading-7 text-gray-600">
               Create your account to explore events, grab tickets, and never
-              miss out on the moments that matter .{" "}
+              miss out on the moments that matter.
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="mt-8 space-y-5">
-            <div className="flex flex-row justify-between gap-5">
+            <div className="grid gap-5 sm:grid-cols-2">
               <div className="flex flex-col gap-2">
                 <label
-                  htmlFor="email"
+                  htmlFor="firstName"
                   className="text-sm font-semibold text-gray-900"
                 >
-                  First name
+                  First Name
                 </label>
 
                 <input
                   id="firstName"
                   name="firstName"
                   type="text"
-                  placeholder="First Name"
-                  autoComplete="text"
+                  placeholder="First name"
+                  autoComplete="given-name"
                   required
                   className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 outline-none transition placeholder:italic placeholder:text-gray-400 focus:border-green-700 focus:ring-2 focus:ring-green-100"
                 />
-              </div>{" "}
+              </div>
+
               <div className="flex flex-col gap-2">
                 <label
-                  htmlFor="phoneNumber"
+                  htmlFor="lastName"
                   className="text-sm font-semibold text-gray-900"
                 >
-                  Last name
+                  Last Name
                 </label>
 
                 <input
                   id="lastName"
                   name="lastName"
                   type="text"
-                  placeholder="Last Name"
-                  autoComplete="text"
+                  placeholder="Last name"
+                  autoComplete="family-name"
                   required
                   className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 outline-none transition placeholder:italic placeholder:text-gray-400 focus:border-green-700 focus:ring-2 focus:ring-green-100"
                 />
@@ -121,7 +127,7 @@ const Signup = () => {
                 id="createPassword"
                 name="createPassword"
                 type="password"
-                placeholder="******"
+                placeholder="Create a strong password"
                 autoComplete="new-password"
                 required
                 className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 outline-none transition placeholder:italic placeholder:text-gray-400 focus:border-green-700 focus:ring-2 focus:ring-green-100"
@@ -140,31 +146,42 @@ const Signup = () => {
                 id="confirmPassword"
                 name="confirmPassword"
                 type="password"
-                placeholder="******"
+                placeholder="Confirm your password"
                 autoComplete="new-password"
                 required
                 className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 outline-none transition placeholder:italic placeholder:text-gray-400 focus:border-green-700 focus:ring-2 focus:ring-green-100"
               />
             </div>
 
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <div className="flex items-center gap-2">
-                <input
-                  id="remember"
-                  name="remember"
-                  type="checkbox"
-                  className="h-4 w-4 rounded border-gray-300 accent-green-800"
-                />
+            <div className="flex items-start gap-2">
+              <input
+                id="terms"
+                name="terms"
+                type="checkbox"
+                required
+                className="mt-1 h-4 w-4 shrink-0 rounded border-gray-300 accent-green-800"
+              />
 
-                <label
-                  htmlFor="remember"
-                  className="cursor-pointer text-sm text-gray-700"
+              <label
+                htmlFor="terms"
+                className="cursor-pointer text-sm leading-6 text-gray-700"
+              >
+                I agree to the{" "}
+                <Link
+                  to="/terms"
+                  className="font-medium text-green-700 hover:underline"
                 >
-                  I agree to{" "}
-                  <span className="text-green-600">Terms of Service</span> and{" "}
-                  <span className="text-green-600">Privacy Policies</span>
-                </label>
-              </div>
+                  Terms of Service
+                </Link>{" "}
+                and{" "}
+                <Link
+                  to="/privacy-policy"
+                  className="font-medium text-green-700 hover:underline"
+                >
+                  Privacy Policy
+                </Link>
+                .
+              </label>
             </div>
 
             <button
@@ -180,13 +197,22 @@ const Signup = () => {
               <hr className="flex-1 border-gray-300" />
             </div>
 
+            <button
+              type="button"
+              onClick={handleGoogleSignup}
+              className="flex w-full items-center justify-center gap-3 rounded-lg border border-gray-300 px-4 py-3 font-semibold text-gray-800 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-offset-2"
+            >
+              <Google fontSize="small" />
+              Continue with Google
+            </button>
+
             <p className="text-center text-sm text-gray-600">
               Already have an account?{" "}
               <Link
-                to="/signup"
+                to="/signin"
                 className="font-semibold text-green-800 transition hover:text-green-700 hover:underline"
               >
-                Login
+                Log in
               </Link>
             </p>
           </form>
@@ -212,8 +238,8 @@ const Signup = () => {
           </h2>
 
           <p className="mt-4 leading-7 text-white/80">
-            Sign in to explore events, manage bookings, and stay connected with
-            unforgettable experiences.
+            Create an account to explore events, manage bookings, and stay
+            connected with unforgettable experiences.
           </p>
         </div>
       </section>
