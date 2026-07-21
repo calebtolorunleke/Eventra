@@ -1,8 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Google } from "@mui/icons-material";
-import signIn from "../../assets/images/partySpray.jpg";
+import signUpImage from "../../assets/images/partySpray.jpg";
 import Logo from "@/components/common/Logo";
+
+const inputStyles =
+  "w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 outline-none transition placeholder:italic placeholder:text-gray-400 focus:border-green-700 focus:ring-2 focus:ring-green-100";
+
+const FormInput = ({ label, id, type = "text", placeholder, autoComplete }) => (
+  <div className="flex flex-col gap-2">
+    <label htmlFor={id} className="text-sm font-semibold text-gray-900">
+      {label}
+    </label>
+
+    <input
+      id={id}
+      name={id}
+      type={type}
+      placeholder={placeholder}
+      autoComplete={autoComplete}
+      required
+      className={inputStyles}
+    />
+  </div>
+);
 
 const Signup = () => {
   const handleSubmit = (event) => {
@@ -19,139 +40,69 @@ const Signup = () => {
         <div className="w-full max-w-md">
           <Link
             to="/"
-            className="mb-10 inline-flex items-center gap-2"
+            className="mb-10 inline-flex"
             aria-label="Go to Eventra homepage"
           >
             <Logo />
           </Link>
 
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-              Create an Account
-            </h1>
+          <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            Create an Account
+          </h1>
 
-            <p className="mt-3 leading-7 text-gray-600">
-              Create your account to explore events, grab tickets, and never
-              miss out on the moments that matter.
-            </p>
-          </div>
+          <p className="mt-3 leading-7 text-gray-600">
+            Create your account to explore events, grab tickets, and never miss
+            out on the moments that matter.
+          </p>
 
           <form onSubmit={handleSubmit} className="mt-8 space-y-5">
             <div className="grid gap-5 sm:grid-cols-2">
-              <div className="flex flex-col gap-2">
-                <label
-                  htmlFor="firstName"
-                  className="text-sm font-semibold text-gray-900"
-                >
-                  First Name
-                </label>
+              <FormInput
+                label="First Name"
+                id="firstName"
+                placeholder="First name"
+                autoComplete="given-name"
+              />
 
-                <input
-                  id="firstName"
-                  name="firstName"
-                  type="text"
-                  placeholder="First name"
-                  autoComplete="given-name"
-                  required
-                  className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 outline-none transition placeholder:italic placeholder:text-gray-400 focus:border-green-700 focus:ring-2 focus:ring-green-100"
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label
-                  htmlFor="lastName"
-                  className="text-sm font-semibold text-gray-900"
-                >
-                  Last Name
-                </label>
-
-                <input
-                  id="lastName"
-                  name="lastName"
-                  type="text"
-                  placeholder="Last name"
-                  autoComplete="family-name"
-                  required
-                  className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 outline-none transition placeholder:italic placeholder:text-gray-400 focus:border-green-700 focus:ring-2 focus:ring-green-100"
-                />
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="email"
-                className="text-sm font-semibold text-gray-900"
-              >
-                Email Address
-              </label>
-
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="usersemail@email.com"
-                autoComplete="email"
-                required
-                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 outline-none transition placeholder:italic placeholder:text-gray-400 focus:border-green-700 focus:ring-2 focus:ring-green-100"
+              <FormInput
+                label="Last Name"
+                id="lastName"
+                placeholder="Last name"
+                autoComplete="family-name"
               />
             </div>
 
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="phoneNumber"
-                className="text-sm font-semibold text-gray-900"
-              >
-                Phone Number
-              </label>
+            <FormInput
+              label="Email Address"
+              id="email"
+              type="email"
+              placeholder="usersemail@email.com"
+              autoComplete="email"
+            />
 
-              <input
-                id="phoneNumber"
-                name="phoneNumber"
-                type="tel"
-                placeholder="Enter your phone number"
-                autoComplete="tel"
-                required
-                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 outline-none transition placeholder:italic placeholder:text-gray-400 focus:border-green-700 focus:ring-2 focus:ring-green-100"
-              />
-            </div>
+            <FormInput
+              label="Phone Number"
+              id="phoneNumber"
+              type="tel"
+              placeholder="Enter your phone number"
+              autoComplete="tel"
+            />
 
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="createPassword"
-                className="text-sm font-semibold text-gray-900"
-              >
-                Create Password *
-              </label>
+            <FormInput
+              label="Create Password *"
+              id="createPassword"
+              type="password"
+              placeholder="Create a strong password"
+              autoComplete="new-password"
+            />
 
-              <input
-                id="createPassword"
-                name="createPassword"
-                type="password"
-                placeholder="Create a strong password"
-                autoComplete="new-password"
-                required
-                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 outline-none transition placeholder:italic placeholder:text-gray-400 focus:border-green-700 focus:ring-2 focus:ring-green-100"
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="confirmPassword"
-                className="text-sm font-semibold text-gray-900"
-              >
-                Confirm Password *
-              </label>
-
-              <input
-                id="confirmPassword"
-                name="confirmPassword"
-                type="password"
-                placeholder="Confirm your password"
-                autoComplete="new-password"
-                required
-                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 outline-none transition placeholder:italic placeholder:text-gray-400 focus:border-green-700 focus:ring-2 focus:ring-green-100"
-              />
-            </div>
+            <FormInput
+              label="Confirm Password *"
+              id="confirmPassword"
+              type="password"
+              placeholder="Confirm your password"
+              autoComplete="new-password"
+            />
 
             <div className="flex items-start gap-2">
               <input
@@ -159,24 +110,21 @@ const Signup = () => {
                 name="terms"
                 type="checkbox"
                 required
-                className="mt-1 h-4 w-4 shrink-0 rounded border-gray-300 accent-green-800"
+                className="mt-1 h-4 w-4 shrink-0 accent-green-800"
               />
 
               <label
                 htmlFor="terms"
-                className="cursor-pointer text-sm leading-6 text-gray-700"
+                className="text-sm leading-6 text-gray-700"
               >
                 I agree to the{" "}
-                <Link
-                  to="/terms"
-                  className="font-medium text-green-700 hover:underline"
-                >
+                <Link to="/terms" className="text-green-700 hover:underline">
                   Terms of Service
                 </Link>{" "}
                 and{" "}
                 <Link
                   to="/privacy-policy"
-                  className="font-medium text-green-700 hover:underline"
+                  className="text-green-700 hover:underline"
                 >
                   Privacy Policy
                 </Link>
@@ -186,21 +134,21 @@ const Signup = () => {
 
             <button
               type="submit"
-              className="w-full rounded-lg bg-green-950 px-4 py-3 font-semibold text-white transition hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-offset-2"
+              className="w-full rounded-lg bg-green-950 px-4 py-3 font-semibold text-white transition hover:bg-green-900"
             >
               Create Account
             </button>
 
             <div className="flex items-center gap-4">
               <hr className="flex-1 border-gray-300" />
-              <span className="text-sm font-medium text-gray-500">Or</span>
+              <span className="text-sm text-gray-500">Or</span>
               <hr className="flex-1 border-gray-300" />
             </div>
 
             <button
               type="button"
               onClick={handleGoogleSignup}
-              className="flex w-full items-center justify-center gap-3 rounded-lg border border-gray-300 px-4 py-3 font-semibold text-gray-800 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-offset-2"
+              className="flex w-full items-center justify-center gap-3 rounded-lg border border-gray-300 px-4 py-3 font-semibold transition hover:bg-gray-50"
             >
               <Google fontSize="small" />
               Continue with Google
@@ -210,7 +158,7 @@ const Signup = () => {
               Already have an account?{" "}
               <Link
                 to="/signin"
-                className="font-semibold text-green-800 transition hover:text-green-700 hover:underline"
+                className="font-semibold text-green-800 hover:underline"
               >
                 Log in
               </Link>
@@ -221,7 +169,7 @@ const Signup = () => {
 
       <section className="relative hidden min-h-screen overflow-hidden lg:block">
         <img
-          src={signIn}
+          src={signUpImage}
           alt="People celebrating together at an event"
           className="absolute inset-0 h-full w-full object-cover"
         />
