@@ -7,6 +7,7 @@ import Discover from "./pages/Discover/Discover";
 import Aboutus from "./pages/Aboutus/Aboutus";
 import Contactus from "./pages/Contact/Contactus";
 import Signin from "./pages/Auth/Signin";
+import Signup from "./pages/Auth/Signup";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route element={<Signin />} path="/signin" />
+          <Route element={<Signup />} path="/signup" />
           <Route element={<Layout />}>
             <Route element={<LandingPage />} path="/" />
             <Route element={<Aboutus />} path="aboutus" />
