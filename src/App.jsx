@@ -6,12 +6,14 @@ import Layout from "./Layout";
 import Discover from "./pages/Discover/Discover";
 import Aboutus from "./pages/Aboutus/Aboutus";
 import Contactus from "./pages/Contact/Contactus";
+import Signin from "./pages/Auth/Signin";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <Routes>
+          <Route element={<Signin />} path="/signin" />
           <Route element={<Layout />}>
             <Route element={<LandingPage />} path="/" />
             <Route element={<Aboutus />} path="aboutus" />
